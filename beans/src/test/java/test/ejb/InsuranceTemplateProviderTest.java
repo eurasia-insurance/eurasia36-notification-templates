@@ -13,7 +13,7 @@ import org.junit.Test;
 
 import tech.lapsa.insurance.notificationDaemon.template.NotificationMessages;
 import tech.lapsa.insurance.notificationDaemon.template.NotificationTemplates;
-import tech.lapsa.insurance.notificationDaemon.template.TemplateProvider.TemplateProviderLocal;
+import tech.lapsa.insurance.notificationDaemon.template.InsuranceTemplateProvider.InsuranceTemplateProviderLocal;
 import tech.lapsa.java.commons.exceptions.IllegalArgument;
 import tech.lapsa.java.commons.function.MyCollections;
 import tech.lapsa.java.commons.logging.MyLogger;
@@ -22,7 +22,7 @@ import tech.lapsa.java.commons.logging.MyLogger.MyLevel;
 public class InsuranceTemplateProviderTest extends ArquillianBaseTestCase {
 
     @Inject
-    private TemplateProviderLocal templates;
+    private InsuranceTemplateProviderLocal templates;
 
     private static final MyLevel logger = MyLogger.newBuilder() //
 	    .withNameOf(InsuranceTemplateProviderTest.class) //

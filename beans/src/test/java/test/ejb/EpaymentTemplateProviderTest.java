@@ -13,7 +13,7 @@ import org.junit.Test;
 
 import tech.lapsa.epayment.notificationDaemon.template.NotificationMessages;
 import tech.lapsa.epayment.notificationDaemon.template.NotificationTemplates;
-import tech.lapsa.epayment.notificationDaemon.template.TemplateProvider.TemplateProviderLocal;
+import tech.lapsa.epayment.notificationDaemon.template.EpaymentTemplateProvider.EpaymentTemplateProviderLocal;
 import tech.lapsa.java.commons.exceptions.IllegalArgument;
 import tech.lapsa.java.commons.function.MyCollections;
 import tech.lapsa.java.commons.logging.MyLogger;
@@ -22,7 +22,7 @@ import tech.lapsa.java.commons.logging.MyLogger.MyLevel;
 public class EpaymentTemplateProviderTest extends ArquillianBaseTestCase {
 
     @Inject
-    private TemplateProviderLocal templates;
+    private EpaymentTemplateProviderLocal templates;
 
     private static final MyLevel logger = MyLogger.newBuilder() //
 	    .withNameOf(EpaymentTemplateProviderTest.class) //

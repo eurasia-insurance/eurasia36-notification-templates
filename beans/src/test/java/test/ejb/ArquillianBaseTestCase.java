@@ -5,7 +5,7 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
 import org.junit.runner.RunWith;
 
-import tech.lapsa.eurasia36.notificationDaemon.template.beans.Eurasia36TemplateProviderBean;
+import tech.lapsa.eurasia36.notificationDaemon.template.beans.EpaymentTemplateProviderBean;
 import tech.lapsa.lapsa.arquillian.archive.ArchiveBuilderFactory;
 
 @RunWith(Arquillian.class)
@@ -13,7 +13,7 @@ public abstract class ArquillianBaseTestCase {
 
     private static final Archive<?> DEPLOYMENT = ArchiveBuilderFactory.newEarBuilder() //
 	    .withModule(ArchiveBuilderFactory.newEjbBuilder() //
-		    .withPackageOf(Eurasia36TemplateProviderBean.class) //
+		    .withPackageOf(EpaymentTemplateProviderBean.class) //
 		    .withManifestFolder() //
 		    .build() //
 		    .dumpingTo(System.out::println)) //
