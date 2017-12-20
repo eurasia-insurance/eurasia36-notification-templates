@@ -1,0 +1,2 @@
+tech.lapsa.epayment.notificationDaemon.template.NotificationMessages.PAYMENT_LINK_NOTIFICATION_SUBJECT = $instanceVerb : Тапсырыс төлемді күтуде (нөмірі -= $invoice.externalId =-)
+tech.lapsa.epayment.notificationDaemon.template.NotificationMessages.PAYMENT_SUCCESS_SUBJECT = $instanceVerb : Тапсырысты төлеу сәтті жүргізілді (нөмірі -= $invoice.externalId =-)

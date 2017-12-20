@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+	<table width="100%"
+		style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
+		<tr>
+			<!-- HEADER -->
+			<td>
+				<table style="padding: 20px 30px;" width="100%" bgcolor="#1c3e86">
+					<tr>
+						<td><img src="https://eurasia36.kz/img/external/eurasia-sign_KK.png" width="157" height="35" /></td>
+						<td align="right"><span style="color: #FFFFFF;">
+							<a href="tel:8 (800) 080 0099"><span
+								style="color: #FFFFFF;">8 (800) 080 0099</span></a> немесе
+							<a href="tel:5678"><span
+								style="color: #FFFFFF;">5678</span></a></span></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<!-- CONTENT -->
+			<td>
+				<div style="padding: 20px 30px;">
+					<h1 style="color: #1c3e86;">
+						Авто КАСКО Сақтандыруға сіздің өтініміңіз <small>[#$insuranceRequest.id]</small>
+					</h1>
+					<p>
+						Сәлеметсіз бе, құрметті <strong>$requester.name</strong>!
+					</p>
+					<p>
+						Сіз «Еуразия» сақтандыру компаниясының интернет-дүкеніне Авто КАСКО сақтандыру
+						қызметіне тапсырыс бердіңіз.</p>
+					<p>
+						Сіздің тапсырысыңыздың нөмірі: $insuranceRequest.id<br />
+						Тапсырыстың күні мен уақыты: $date.regular($insuranceRequest.created)
+					</p>
+					<p>
+						Төлеуге арналған сома: <strong>₸&nbsp;$casco.calculation.premiumCost</strong>
+					</p>
+
+#if($requester.phone)
+					<p>
+						30 мин ішінде біздің менеджер Сіз көрсеткен телефон нөміріне Сізбен
+						хабарласады: <strong>$requester.phone.formatted</strong>
+					</p>
+#end
+
+
+#if( $obtaining.method.name() == "DELIVERY" )
+					<p>
+						Жеткізілім жүргізілетін болады: <strong>$date.regular($obtaining.deliveryDate)
+							$localized.regular($obtaining.deliveryTime)</strong> <br />
+						Барлық ақпараттар туралы біздің менеджер Сізге телефон арқылы хабарлайды.
+					</p>
+#end
+
+#if( $obtaining.method.name() == "PICKUP" )
+					<p>
+						Сіз төлем жасай аласыз және Өзіңіздің полисіңізді сақтандыру компаниясының 
+						кеңсесінен алып кете аласыз <strong>$localized.regular($obtaining.pickupPOS)</strong> мекен-жайы бойынша: 
+						<strong>$localized.regular($obtaining.pickupPOS.address)</strong>
+					</p>
+	#if (!$obtaining.pickupPOS.phones.isEmpty())
+					<p>Байланыс телефондары:</p>
+					<ul>
+						#foreach ($contactPhone in $obtaining.pickupPOS.phones)
+						<li>$contactPhone.phone</li> #end
+					</ul>
+	#end
+#end
+					<p>
+						Қосымша сұрақтар туындаған жағдайда Сіз <a href="tel:8 (800) 080 0099">8 (800) 080 0099</a> немесе 
+						<a href="tel:5678">5678</a> нөмірі бойынша қоңырау шала аласыз.
+					</p>
+					<p>Бізге білдірген сеніміңіз үшін рақмет!</p>
+					<br /> <br />
+					<hr />
+					<p>Құрметпен, Еуразия36 командасы</p>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<!-- FOOTER -->
+			<td>
+				<table width="100%" bgcolor="#1c3e86"
+					style="color: #FFFFFF; padding: 20px 30px;">
+					<tr>
+						<td valign="top" width="100%"><strong>Бас кеңсе</strong><br />
+							«Еуразия» СК» АҚ<br />050004, Алматы қ., Желтоқсан көшесі, 59<br />
+							тел.: <a href="tel:8 (800) 080 0099"><span
+								style="color: #FFFFFF;">8 (800) 080 0099</span></a> немесе
+								<a href="tel:5678"><span
+								style="color: #FFFFFF;">5678</span></a><br />
+							факс: <a href="tel:+7 (727) 258-43-38"><span
+								style="color: #FFFFFF;">+7 (727) 258-43-38</span></a></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+	<table width="100%"
+		style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
+		<tr>
+			<!-- CONTENT -->
+			<td>
+				<div style="padding: 20px 30px;">
+					<h1 style="color: #1c3e86;">
+						Поступила новая заявка Авто КАСКО <small>[#$insuranceRequest.id]</small>
+						($localized.few($insuranceRequest.type))
+					</h1>
+
+#if ($requester.name)
+					<p>
+						ФИО отправившего заявку: <strong>$requester.name</strong>!
+					</p>
+#end
+					<p>
+						Номер заказа: $insuranceRequest.id<br /> Дата и время заказа:
+						$date.regular($insuranceRequest.created)
+					</p>
+					<p>
+						Сумма к оплате: <strong>₸&nbsp;$casco.calculation.premiumCost</strong>
+					</p>
+
+#if( $obtaining.method.name() == "EXPRESS" )
+					<p>
+						Доставка: <strong>$date.regular($obtaining.deliveryDate)</strong> 
+							
+							<strong>$localized.regular($obtaining.deliveryTime)</strong>
+
+					</p>
+#end
+
+#if( $obtaining.method.name() == "PICKUP" )
+					<p>
+						<strong>Доставка не требуется. Самовывоз.</strong>
+					</p>
+					<p>
+						Самовывоз будет осуществлен из офиса: <strong>$localized.regular($obtaining.pickupPOS)</strong> <br />
+						Адрес: <strong>$localized.regular($obtaining.pickupPOS.address)</strong>
+#end
+
+					<p>С уважением, команда Евразии 36</p>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
