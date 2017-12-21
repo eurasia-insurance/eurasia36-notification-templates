@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringWriter;
+import java.nio.charset.Charset;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -17,11 +18,13 @@ import tech.lapsa.java.commons.util.MyResourceBundles;
 
 public abstract class BaseTemplateProvider {
 
+    private static final Charset DEFAULT_CHARSET = Charset.forName("UTF-8");
+
     protected <T extends Enum<?>> String _getTemplate(final T entity, final Locale locale) {
 	final String templateName = _getMessage(entity, locale);
 
 	try (final InputStream is = MyResources.getAsStream(this.getClass(), templateName);
-		final InputStreamReader isr = new InputStreamReader(is);
+		final InputStreamReader isr = new InputStreamReader(is, DEFAULT_CHARSET);
 		final StringWriter sw = new StringWriter()) {
 	    int readed = -1;
 	    char[] cbuff = new char[256];
