@@ -1,0 +1,2 @@
+tech.lapsa.epayment.notificationDaemon.template.NotificationMessages.PAYMENT_LINK_NOTIFICATION_SUBJECT = $instanceVerb : Заказ ожидает оплаты (номер -= $invoice.externalId =-)
+tech.lapsa.epayment.notificationDaemon.template.NotificationMessages.PAYMENT_SUCCESS_SUBJECT = $instanceVerb : Оплата заказа произведена успешно (номер -= $invoice.externalId =-)

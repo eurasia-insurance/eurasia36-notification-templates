@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+	<table width="100%"
+		style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
+		<tr>
+			<!-- HEADER -->
+			<td>
+				<table style="padding: 20px 30px;" width="100%" bgcolor="#1c3e86">
+					<tr>
+						<td><img src="https://eurasia36.kz/img/external/eurasia-sign_RU.png" width="157" height="35" /></td>
+						<td align="right"><span style="color: #FFFFFF;">
+							<a href="tel:8 (800) 080 0099"><span
+								style="color: #FFFFFF;">8 (800) 080 0099</span></a> или
+							<a href="tel:5678"><span
+								style="color: #FFFFFF;">5678</span></a></span></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<!-- CONTENT -->
+			<td>
+				<div style="padding: 20px 30px;">
+					<h1 style="color: #1c3e86;">
+						Ваша заявка на полис ОС ОГПО ВТС <small>[#$insuranceRequest.id]</small>
+					</h1>
+					<p>
+						Здравствуйте, уважаемый(-ая) <strong>$requester.name</strong>!
+					</p>
+					<p>
+						Вы заказали полис ОС ГПО ВТС в интернет-магазине страховой
+						компании «Евразия».
+					</p>
+					<p>
+						Номер Вашего заказа: $insuranceRequest.id<br /> Дата и время
+						заказа: $date.regular($insuranceRequest.created)
+					</p>
+					<p>
+						Сумма к оплате: <strong>₸&nbsp;$policy.calculation.premiumCost</strong>
+					</p>
+
+#if($requester.phone)
+					<p>
+						В течении 30 мин наш менеджер свяжется с Вами по
+						указанному Вами номеру телефона: <strong>$requester.phone.formatted</strong>
+					</p>
+#end
+
+
+#if( $obtaining.method.name() == "DELIVERY" )
+					<p>
+						Доставка будет произведена: <strong>$date.regular($obtaining.deliveryDate)
+							$localized.regular($obtaining.deliveryTime)</strong> <br />
+							О всех подробностях наш менеджер Вам сообщит по телефону.
+					</p>
+#end
+
+#if( $obtaining.method.name() == "PICKUP" )
+					<p>
+						Вы можете произвести оплату и забрать Ваш полис в офисе страховой
+						компании <strong>$localized.regular($obtaining.pickupPOS)</strong> по адресу: <strong>$localized.regular($obtaining.pickupPOS.address)</strong>
+					</p>
+	#if (!$obtaining.pickupPOS.phones.isEmpty())
+					<p>Контактные телефоны:</p>
+					<ul>
+						#foreach ($contactPhone in $obtaining.pickupPOS.phones)
+						<li>$contactPhone.phone</li>
+						#end
+					</ul>
+	#end
+#end
+					<p>
+						В случае возникновения дополнительных вопросов Вы можете позвонить
+						нам по номеру <a href="tel:8 (800) 080 0099">8 (800) 080 0099</a> или 
+						<a href="tel:5678">5678</a>
+					</p>
+					<p>Спасибо за оказанное нам доверие!</p>
+					<br /> <br />
+					<hr />
+					<p>С уважением, команда Евразия36</p>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<!-- FOOTER -->
+			<td>
+				<table width="100%" bgcolor="#1c3e86"
+					style="color: #FFFFFF; padding: 20px 30px;">
+					<tr>
+						<td valign="top" width="100%"><strong>Головной офис</strong><br />
+							АО «СК «Евразия»<br> 050004, г.Алматы, ул.Желтоксан, 59<br />
+							тел.: <a href="tel:8 (800) 080 0099"><span
+								style="color: #FFFFFF;">8 (800) 080 0099</span></a> или
+								<a href="tel:5678"><span
+								style="color: #FFFFFF;">5678</span></a><br />
+							факс: <a href="tel:+7 (727) 258-43-38"><span
+								style="color: #FFFFFF;">+7 (727) 258-43-38</span></a></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

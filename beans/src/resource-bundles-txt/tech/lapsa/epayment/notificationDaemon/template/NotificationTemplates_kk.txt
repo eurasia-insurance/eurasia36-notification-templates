@@ -1,0 +1,2 @@
+tech.lapsa.epayment.notificationDaemon.template.NotificationTemplates.PAYMENT_LINK_NOTIFICATION_TEMPLATE = /epayment-templates/kk/payment-link-notification.html
+tech.lapsa.epayment.notificationDaemon.template.NotificationTemplates.PAYMENT_SUCCESS_TEMPLATE = /epayment-templates/kk/payment-success-notification.html

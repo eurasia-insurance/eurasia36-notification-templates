@@ -1,0 +1,9 @@
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.CALLBACK_COMPANY_PUSH_BODY = Not available
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.CALLBACK_COMPANY_PUSH_TITLE = Not available
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.CASCO_COMPANY_EMAIL_SUBJECT = Not available
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.CASCO_USER_EMAIL_SUBJECT = $instanceVerb : New Hull Insurance Application (Number -= $insuranceRequest.id =-)
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.INSURANCE_COMPANY_PUSH_BODY = Not available
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.INSURANCE_COMPANY_PUSH_TITLE = Not available
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.POLICY_COMPANY_EMAIL_SUBJECT = Not available
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.POLICY_USER_EMAIL_SUBJECT = $instanceVerb : New application for compulsory motor third party liability insurance (number-= $insuranceRequest.id =-)
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.INUSNRANCE_PAID_COMPANY_EMAIL_SUBJECT = Not available

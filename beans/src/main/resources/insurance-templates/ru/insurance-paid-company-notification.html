@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+	<table width="100%"
+		style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
+		<tr>
+			<!-- CONTENT -->
+			<td>
+				<div style="padding: 20px 30px;">
+					<h1 style="color: #1c3e86;">
+						Заявка <small>[#$insuranceRequest.id]</small> оплачена
+					</h1>
+
+					<p>
+						Номер заказа: $insuranceRequest.id<br /> Дата и время заказа:
+						$date.regular($insuranceRequest.created)
+					</p>
+
+					<ul>
+						<li>Способ оплаты: <strong>$insuranceRequest.payment.methodName</strong></li>
+						<li>Время оплаты: <strong>$date.regular($insuranceRequest.payment.paymentInstant)</strong></li>
+						<li>Оплаченная сумма: <strong>₸&nbsp;$insuranceRequest.payment.paymentAmount</strong></li>
+						<li>Номер счета: <strong>$insuranceRequest.payment.externalId</strong></li>
+						<li>Референс: <strong>$insuranceRequest.payment.paymentReference</strong></li>
+					</ul>
+
+					<p>С уважением, команда Евразии 36</p>
+			</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

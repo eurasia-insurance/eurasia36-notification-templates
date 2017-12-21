@@ -1,0 +1,9 @@
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.CALLBACK_COMPANY_PUSH_BODY = Поступил запрос на обратный звонок#if ($requester.name) от $requester.name #end
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.CALLBACK_COMPANY_PUSH_TITLE = Обратный звонок # $callbackRequest.id ($instanceVerb)
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.CASCO_COMPANY_EMAIL_SUBJECT = ВНИМАНИЕ! ($localized.few($insuranceRequest.type)) заявка на страхование Авто КАСКО (номер -= $insuranceRequest.id =-) ($instanceVerb)
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.CASCO_USER_EMAIL_SUBJECT = $instanceVerb : Новая заявка на страхование Авто КАСКО (номер -= $insuranceRequest.id =-)
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.INSURANCE_COMPANY_PUSH_BODY = Поступила $localized.few($insuranceRequest.type) заявка по продукту $localized.regular($insuranceRequest.productType) #if ($requester.name)от $requester.name #end на сумму ₸$product.calculation.premiumCost
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.INSURANCE_COMPANY_PUSH_TITLE = Новая $localized.few($insuranceRequest.type) заявка # $insuranceRequest.id ($instanceVerb)
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.POLICY_COMPANY_EMAIL_SUBJECT = ВНИМАНИЕ! ($localized.few($insuranceRequest.type)) заявка на полис ОС ГПО ВТС (номер -= $insuranceRequest.id =-) ($instanceVerb)
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.POLICY_USER_EMAIL_SUBJECT = $instanceVerb : Новая заявка на полис ОС ГПО ВТС (номер -= $insuranceRequest.id =-)
+tech.lapsa.insurance.notificationDaemon.template.NotificationMessages.INUSNRANCE_PAID_COMPANY_EMAIL_SUBJECT = ВНИМАНИЕ! Поступила оплата по заявке (номер -= $insuranceRequest.id =-) ($instanceVerb)
