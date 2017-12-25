@@ -10,7 +10,7 @@
 	<artifactId>eurasia36-notification-templates-app</artifactId>
 	<packaging>ear</packaging>
 
-	<name>Eurasia36 Lib : Notification templates : EE Application</name>
+	<name>Eurasia36 Lib : Notification templates : EAR</name>
 
 	<dependencies>
 		<dependency>
