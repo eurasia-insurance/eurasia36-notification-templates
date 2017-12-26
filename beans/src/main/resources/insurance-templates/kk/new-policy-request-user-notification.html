@@ -40,39 +40,13 @@
 						Тапсырыстың күні мен уақыты: $date.regular($insuranceRequest.created)
 					</p>
 					<p>
-						Төлемге арналған сома: <strong>₸&nbsp;$policy.calculation.premiumCost</strong>
+						Төлемге арналған сома: <strong>₸&nbsp;$policy.calculation.amount</strong>
 					</p>
-
 #if($requester.phone)
 					<p>
 						30 мин ішінде біздің менеджер Сіз көрсеткен телефон нөміріне Сізбен
 						хабарласады: <strong>$requester.phone.formatted</strong>
 					</p>
-#end
-
-
-#if( $obtaining.method.name() == "DELIVERY" )
-					<p>
-						Жеткізілім жүргізілетін болады: <strong>$date.regular($obtaining.deliveryDate)
-							$localized.regular($obtaining.deliveryTime)</strong> <br />
-						Барлық ақпараттар туралы біздің менеджер Сізге телефон арқылы хабарлайды.
-					</p>
-#end
-
-#if( $obtaining.method.name() == "PICKUP" )
-					<p>
-						Сіз төлем жасай аласыз және Өзіңіздің полисіңізді сақтандыру компаниясының 
-						кеңсесінен алып кете аласыз <strong>$localized.regular($obtaining.pickupPOS)</strong> мекен-жайы бойынша:
-						<strong>$localized.regular($obtaining.pickupPOS.address)</strong>
-					</p>
-	#if (!$obtaining.pickupPOS.phones.isEmpty())
-					<p>Байланыс телефондары:</p>
-					<ul>
-						#foreach ($contactPhone in $obtaining.pickupPOS.phones)
-						<li>$contactPhone.phone</li>
-						#end
-					</ul>
-	#end
 #end
 					<p>
 						Қосымша сұрақтар туындаған жағдайда Сіз <a href="tel:8 (800) 080 0099">8 (800) 080 0099</a> немесе 

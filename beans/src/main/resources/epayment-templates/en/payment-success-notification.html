@@ -28,7 +28,11 @@
 					<h1 style="color: #1c3e86;">
 						Order No <strong>$invoice.externalId</strong> has been paid, amount <strong>KZT&nbsp;$invoice.payment.amount</strong>
 					</h1>
-					<p>Paid at <strong>$date.regular($invoice.payment.created)</strong> with reference <strong>$invoice.payment.referenceNumber</strong></p>
+					<p>Paid at <strong>$date.regular($invoice.payment.created)</strong>
+#if ($invoice.payment.reference)
+					 with reference <strong>$invoice.payment.reference</strong>
+#end
+					</p>
 					<p>Thank you for payment for your order</p>
 					<p>Our specialists will contact you shortly to discuss further steps</p>
 					<p>

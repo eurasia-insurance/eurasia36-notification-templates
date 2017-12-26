@@ -40,38 +40,13 @@
 						заказа: $date.regular($insuranceRequest.created)
 					</p>
 					<p>
-						Сумма к оплате: <strong>₸&nbsp;$casco.calculation.premiumCost</strong>
+						Сумма к оплате: <strong>₸&nbsp;$casco.calculation.amount</strong>
 					</p>
-
 #if($requester.phone)
 					<p>
 						В течении 30 мин наш менеджер свяжется с Вами по
 						указанному Вами номеру телефона: <strong>$requester.phone.formatted</strong>
 					</p>
-#end
-
-
-#if( $obtaining.method.name() == "DELIVERY" )
-					<p>
-						Доставка будет произведена: <strong>$date.regular($obtaining.deliveryDate)
-							$$localized.regular($obtaining.deliveryTime)</strong> <br />
-						О всех подробностях наш менеджер Вам сообщит по телефону.
-					</p>
-#end
-
-#if( $obtaining.method.name() == "PICKUP" )
-					<p>
-						Вы можете произвести оплату и забрать Ваш полис в офисе страховой
-						компании <strong>$localized.regular($obtaining.pickupPOS)</strong> по адресу: <strong>$localized.regular($obtaining.pickupPOS.address)</strong>
-					</p>
-	#if (!$obtaining.pickupPOS.phones.isEmpty())
-					<p>Контактные телефоны:</p>
-					<ul>
-						#foreach ($contactPhone in $obtaining.pickupPOS.phones)
-						<li>$contactPhone.phone</li>
-						#end
-					</ul>
-	#end
 #end
 					<p>
 						В случае возникновения дополнительных вопросов Вы можете позвонить

@@ -28,7 +28,11 @@
 					<h1 style="color: #1c3e86;">
 						Заказ № <strong>$invoice.externalId</strong> оплачен, сумма <strong>₸&nbsp;$invoice.payment.amount</strong>
 					</h1>
-					<p>Оплачено <strong>$date.regular($invoice.payment.created)</strong> референс операции <strong>$invoice.payment.referenceNumber</strong></p>
+					<p>Оплачено <strong>$date.regular($invoice.payment.created)</strong> 
+#if ($invoice.payment.reference)
+					референс операции <strong>$invoice.payment.reference</strong>
+#end
+					</p>
 					<p>Благодарим Вас за оплату заказа</p>
 					<p>В ближайшее время наши менеджеры свяжуться с Вами для
 						обсуждения дальнейших действий</p>
