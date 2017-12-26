@@ -11,22 +11,21 @@
 			<td>
 				<div style="padding: 20px 30px;">
 					<h1 style="color: #1c3e86;">
-						Заявка <small>[#$insuranceRequest.id]</small> оплачена
+						Заявка <strong>[#$insuranceRequest.id]</strong> оплачена
 					</h1>
-
 					<p>
-						Номер заказа: $insuranceRequest.id<br /> Дата и время заказа:
-						$date.regular($insuranceRequest.created)
+						Номер заказа: <strong>$insuranceRequest.id</strong><br />
+						Дата и время заказа: <strong>$date.regular($insuranceRequest.created)</strong>
 					</p>
-
 					<ul>
+						<li>Номер счета: <strong>$insuranceRequest.payment.invoiceNumber</strong></li>
 						<li>Способ оплаты: <strong>$insuranceRequest.payment.methodName</strong></li>
-						<li>Время оплаты: <strong>$date.regular($insuranceRequest.payment.paymentInstant)</strong></li>
-						<li>Оплаченная сумма: <strong>₸&nbsp;$insuranceRequest.payment.paymentAmount</strong></li>
-						<li>Номер счета: <strong>$insuranceRequest.payment.externalId</strong></li>
-						<li>Референс: <strong>$insuranceRequest.payment.paymentReference</strong></li>
+						<li>Время оплаты: <strong>$date.regular($insuranceRequest.payment.instant)</strong></li>
+						<li>Оплаченная сумма: <strong>₸&nbsp;$insuranceRequest.payment.amount</strong></li>
+#if ($insuranceRequest.payment.reference)
+						<li>Референс: <strong>$insuranceRequest.payment.reference</strong></li>
+#end
 					</ul>
-
 					<p>С уважением, команда Евразии 36</p>
 			</div>
 			</td>

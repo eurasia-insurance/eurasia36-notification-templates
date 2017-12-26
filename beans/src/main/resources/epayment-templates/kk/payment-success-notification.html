@@ -28,7 +28,11 @@
 					<h1 style="color: #1c3e86;">
 						Тапсырыс № <strong>$invoice.externalId</strong> төленді, сома <strong>₸&nbsp;$invoice.payment.amount</strong>
 					</h1>
-					<p>Төленді <strong>$date.regular($invoice.payment.created)</strong> референс <strong>$invoice.payment.referenceNumber</strong></p>
+					<p>Төленді <strong>$date.regular($invoice.payment.created)</strong>
+#if ($invoice.payment.reference)
+					 референс <strong>$invoice.payment.reference</strong>
+#end
+</p>
 					<p>Тапсырысты төлегеніңіз үшін Сізге алғысымызды білдіреміз</p>
 					<p>Жақын уақытта біздің менеджерлер одан арғы әрекеттерді талқылау үшін Сізбен хабарласады</p>
 					<p>

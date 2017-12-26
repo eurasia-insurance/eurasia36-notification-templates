@@ -40,38 +40,13 @@
 						Date and Time of Order: $date.regular($insuranceRequest.created)
 					</p>
 					<p>
-						Amount Payable: <strong>₸&nbsp;$casco.calculation.premiumCost</strong>
+						Amount Payable: <strong>₸&nbsp;$casco.calculation.amount</strong>
 					</p>
-
 #if($requester.phone)
 					<p>
 						Our Manager will contact you within 30 minutes at the phone number
 						specified by you: <strong>$requester.phone.formatted</strong>
 					</p>
-#end
-
-
-#if( $obtaining.method.name() == "DELIVERY" )
-					<p>
-						Time of Delivery: <strong>$date.regular($obtaining.deliveryDate)
-							$localized.regular($obtaining.deliveryTime)</strong> <br />
-						The manager will provide you with all the details over the phone.
-					</p>
-#end
-
-#if( $obtaining.method.name() == "PICKUP" )
-					<p>
-						You can make payment and pick-up your policy at the insurance company office
-						компании <strong>$localized.regular($obtaining.pickupPOS)</strong> located on: <strong>$localized.regular($obtaining.pickupPOS.address)</strong>
-					</p>
-	#if (!$obtaining.pickupPOS.phones.isEmpty())
-					<p>Contact Telephone Numbers:</p>
-					<ul>
-						#foreach ($contactPhone in $obtaining.pickupPOS.phones)
-						<li>$contactPhone.phone</li>
-						#end
-					</ul>
-	#end
 #end
 					<p>
 						If you have any further questions, please contact us at
