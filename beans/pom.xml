@@ -22,13 +22,13 @@
 		</dependency>
 		<dependency>
 			<groupId>tech.lapsa.insurance</groupId>
-			<artifactId>insurance-notification-daemon-template-client</artifactId>
+			<artifactId>insurance-notification-template-client</artifactId>
 			<scope>compile</scope>
 			<optional>false</optional>
 		</dependency>
 		<dependency>
 			<groupId>tech.lapsa.epayment</groupId>
-			<artifactId>epayment-notification-daemon-template-client</artifactId>
+			<artifactId>epayment-notification-template-client</artifactId>
 			<scope>compile</scope>
 			<optional>false</optional>
 		</dependency>
