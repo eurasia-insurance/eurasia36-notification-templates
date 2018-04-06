@@ -22,10 +22,10 @@
 	<properties>
 		<!-- BOMS -->
 		<javax-javaee-bom.version>7.0a</javax-javaee-bom.version>
-		<java-commons.version>1.1</java-commons.version>
+		<java-commons.version>1.2</java-commons.version>
 		<!-- tech -->
-		<insurance-notification-daemon.version>2.0</insurance-notification-daemon.version>
-		<epayment-notification-daemon.version>2.0</epayment-notification-daemon.version>
+		<insurance-notification-daemon.version>2.0.2</insurance-notification-daemon.version>
+		<epayment-notification-daemon.version>2.0.2</epayment-notification-daemon.version>
 		<lapsa-arquillian-test.version>1.1</lapsa-arquillian-test.version>
 	</properties>
 
