@@ -9,7 +9,7 @@
 
 	<groupId>tech.lapsa.eurasia36</groupId>
 	<artifactId>eurasia36-notification-templates-root</artifactId>
-	<version>1.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Eurasia36 Lib : Notification templates</name>
