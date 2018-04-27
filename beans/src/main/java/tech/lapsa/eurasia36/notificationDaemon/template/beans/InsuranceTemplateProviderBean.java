@@ -17,7 +17,7 @@ public class InsuranceTemplateProviderBean extends BaseTemplateProvider
 	implements InsuranceTemplateProviderLocal, InsuranceTemplateProviderRemote {
 
     @Override
-    @TransactionAttribute(TransactionAttributeType.REQUIRED)
+    @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
     public String getMessage(final NotificationMessages message, final Locale locale) throws IllegalArgument {
 	try {
 	    return _getMessage(message, locale);
@@ -27,7 +27,7 @@ public class InsuranceTemplateProviderBean extends BaseTemplateProvider
     }
 
     @Override
-    @TransactionAttribute(TransactionAttributeType.REQUIRED)
+    @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
     public String getTemplate(final NotificationTemplates message, final Locale locale) throws IllegalArgument {
 	try {
 	    return _getTemplate(message, locale);
