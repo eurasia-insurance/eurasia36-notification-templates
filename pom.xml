@@ -9,7 +9,7 @@
 
 	<groupId>tech.lapsa.eurasia36</groupId>
 	<artifactId>eurasia36-notification-templates-root</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1</version>
 	<packaging>pom</packaging>
 
 	<name>Eurasia36 Lib : Notification templates</name>
@@ -81,7 +81,7 @@
 	<scm>
 		<connection>scm:git:https://gitlab.lapsa.tech/lapsa/eurasia36/notification-templates.git</connection>
 		<developerConnection>scm:git:https://gitlab.lapsa.tech/lapsa/eurasia36/notification-templates.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v1.1</tag>
 	</scm>
 
 	<issueManagement>
