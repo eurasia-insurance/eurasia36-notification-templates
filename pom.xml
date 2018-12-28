@@ -9,7 +9,7 @@
 
 	<groupId>tech.lapsa.eurasia36</groupId>
 	<artifactId>eurasia36-notification-templates-root</artifactId>
-	<version>1.1</version>
+	<version>CURRENT-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Eurasia36 Lib : Notification templates</name>
@@ -21,12 +21,12 @@
 
 	<properties>
 		<!-- BOMS -->
-		<javax-javaee-bom.version>7.0a</javax-javaee-bom.version>
-		<java-commons.version>1.3</java-commons.version>
+		<javax-javaee-bom.version>CURRENT-SNAPSHOT</javax-javaee-bom.version>
+		<java-commons.version>CURRENT-SNAPSHOT</java-commons.version>
 		<!-- tech -->
-		<insurance-notification-template-client.version>2.1</insurance-notification-template-client.version>
-		<epayment-notification-template-client.version>2.1</epayment-notification-template-client.version>
-		<lapsa-arquillian-test.version>1.2</lapsa-arquillian-test.version>
+		<insurance-notification-template-client.version>CURRENT-SNAPSHOT</insurance-notification-template-client.version>
+		<epayment-notification-template-client.version>CURRENT-SNAPSHOT</epayment-notification-template-client.version>
+		<lapsa-arquillian-test.version>CURRENT-SNAPSHOT</lapsa-arquillian-test.version>
 	</properties>
 
 	<dependencyManagement>
