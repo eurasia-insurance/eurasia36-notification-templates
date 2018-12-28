@@ -79,9 +79,9 @@
 	</dependencyManagement>
 
 	<scm>
-		<connection>scm:git:https://gitlab.lapsa.tech/lapsa/eurasia36/notification-templates.git</connection>
-		<developerConnection>scm:git:https://gitlab.lapsa.tech/lapsa/eurasia36/notification-templates.git</developerConnection>
-		<tag>v1.1</tag>
+		<connection>scm:git:https://github.com/eurasia-insurance/eurasia36-notification-templates.git</connection>
+		<developerConnection>scm:git:https://github.com/eurasia-insurance/eurasia36-notification-templates.git</developerConnection>
+		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
