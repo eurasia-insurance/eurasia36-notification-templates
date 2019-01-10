@@ -21,12 +21,12 @@
 
 	<properties>
 		<!-- BOMS -->
-		<javax-javaee-bom.version>20190110</javax-javaee-bom.version>
-		<java-commons.version>20190110</java-commons.version>
+		<javax-javaee-bom.version>CURRENT-SNAPSHOT</javax-javaee-bom.version>
+		<java-commons.version>CURRENT-SNAPSHOT</java-commons.version>
 		<!-- tech -->
-		<insurance-notification-template-client.version>20190110</insurance-notification-template-client.version>
-		<epayment-notification-template-client.version>20190110</epayment-notification-template-client.version>
-		<lapsa-arquillian-test.version>20190110</lapsa-arquillian-test.version>
+		<insurance-notification-template-client.version>CURRENT-SNAPSHOT</insurance-notification-template-client.version>
+		<epayment-notification-template-client.version>CURRENT-SNAPSHOT</epayment-notification-template-client.version>
+		<lapsa-arquillian-test.version>CURRENT-SNAPSHOT</lapsa-arquillian-test.version>
 	</properties>
 
 	<dependencyManagement>
