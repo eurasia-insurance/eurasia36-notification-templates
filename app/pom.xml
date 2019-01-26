@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>tech.lapsa.eurasia36</groupId>
 		<artifactId>eurasia36-notification-templates-root</artifactId>
-		<version>CURRENT-SNAPSHOT</version>
+		<version>20190126r2</version>
 	</parent>
 
 	<artifactId>eurasia36-notification-templates-app</artifactId>
